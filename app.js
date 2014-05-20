@@ -22,12 +22,3 @@ var server = app.listen(6547, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
 
-
-// send back a piece of the dummy data
-// before the res.send try to access parts of the dummy dummy-data
-// start with always accessing python
-	// then use the userInputKey to access a specific part 
-	// finally - send it back to the client 
-	// render it on the client side
-
-

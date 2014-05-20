@@ -10,10 +10,14 @@ $(document).ready(function(){
 		// console.log(userInput);
 
 		$.get('/search', {userInputKey:userInput}, function(responseData){
-			// step 4 - render
-			var renderedHtml = renderResultsTemplate(userInputKey);
+			// step 4 - render (needs an object)
+			var obj = {
+				name: userInput, 
+				desc: responseData
+			};
+			var renderedHtml = renderResultsTemplate(obj);
 			// step 5 - append
-			$('body').append(responseData);
+			$('#results').empty().append(renderedHtml);
 
 		})
 		return false;
@@ -21,4 +25,4 @@ $(document).ready(function(){
 
 });
 
-// figure out what to pass to the renderResultsTemplate() function (pass it view data)
+
