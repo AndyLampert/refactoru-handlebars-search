@@ -1,4 +1,14 @@
 extends layout
 
 block content
-	h1 Hello Boulder!
+	form(id="main-form", method="", action="")
+		h1 Programming Language Search
+		input(type="text", placeholder="placeholder")
+		button(type="submit", class="search-btn") Search
+	#results
+		//- make handlebars template
+
+	script(id="results-template" type="text/x-handlebars-template")
+		h1 Results of search
+			p name: {{programming.name}}
+			p desc: {{programming.desc}}
